@@ -2,6 +2,9 @@ var FILE_RETURN; //true if operation was successful, false on fail
 var MEMORY = { //file datas will be in "fileData" attribute.
 	fileData : {}
 };
+var SETTINGS = {
+	debug : 1
+};
 
 /*
  # Global Parameters #
@@ -17,6 +20,7 @@ var MEMORY = { //file datas will be in "fileData" attribute.
  Example usage at the bottom.
 */
 
+//saves file's data that send as name parameter on function if used alone.
 function getFile( name, save,successFunc, errorFunc ){
     if( typeof name == 'undefined' )
         return false;
