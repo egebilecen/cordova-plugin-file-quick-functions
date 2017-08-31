@@ -1,3 +1,8 @@
+/*
+ # Author: Ege Bilecen
+ # Website: http://egebilecen.tk/
+ # Contact: blackclown0@gmail.com
+*/
 var FILE_RETURN; //true if operation was successful, false on fail
 var MEMORY = { //file datas will be in "fileData" attribute.
 	fileData : {}
