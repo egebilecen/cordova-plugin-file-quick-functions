@@ -126,6 +126,7 @@ function createFile( name, successFunc, errorFunc ){
     }, function(){if(SETTINGS.debug){console.info('file - error1 - cannot load filesystem');} FILE_RETURN=false;errorFunc();});
 }
 
+//If you want to overwrite to exist file, first use this function to clear it. And then use writeFile() function.
 function clearFile( name, successFunc, errorFunc ){
     if( typeof name == 'undefined' )
         return false;
@@ -141,27 +142,3 @@ function clearFile( name, successFunc, errorFunc ){
         writeFile(name,a,'temporary',function(){ successFunc(); },function(){ errorFunc(); });
     });
 }
-
-/*
- Example usage:
-
-	getFile(SETTINGS.dataFile, 'app',function(){
-		//success
-		MEMORY.fileData.app = JSON.parse(MEMORY.fileData.app);
-	},function(){
-	    //error
-	    createFile(SETTINGS.dataFile,function(){
-	        //success
-	        writeFile(SETTINGS.dataFile,defaultWriteData,'app',function(){
-	            //success
-	            MEMORY.fileData.app = JSON.parse(MEMORY.fileData.app);
-	        },function(){
-	            //error
-	            MEMORY.fileData.app = 'error';
-	        });
-	    },function(){ 
-	        //error
-	        MEMORY.fileData.app = 'error'; 
-	    });
-	});
-*/
