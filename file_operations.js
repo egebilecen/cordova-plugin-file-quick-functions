@@ -1,6 +1,6 @@
 /*
  # Author: Ege Bilecen
- # Website: http://egebilecen.tk/
+ # Website: http://egebilecen.info/
  # Contact: blackclown0@gmail.com
 */
 var FILE_RETURN; //true if operation was successful, false on fail
